@@ -1,0 +1,37 @@
+evidence_axis,metric,value,interpretation
+strict_validity,n_total_images,747,Total HYGD images in unified AQPR manifest.
+strict_validity,n_strict_valid_proxy_images,745,Images eligible for strict OD/OC proxy anatomical endpoints.
+strict_validity,n_proxy_failures,2,Images excluded from strict anatomy-mask endpoints because proxy validity criteria were not met.
+strict_validity,strict_valid_fraction,0.9973226238286479,Fraction of HYGD images passing strict OD/OC proxy validity.
+claim_boundary,proxy_claim_boundary,proxy_audit_region_not_manual_hygd_ground_truth,OD/OC masks are externally developed segmentation proxies and support anatomical audit-region definition; they are not manual HYGD OD/OC ground truth.
+proxy_distribution,cdr_proxy_n,745,Number of strict-valid images with cdr_proxy.
+proxy_distribution,cdr_proxy_mean,0.4281295388894607,Mean cdr_proxy among strict-valid images.
+proxy_distribution,cdr_proxy_std,0.12038751208010552,Standard deviation of cdr_proxy among strict-valid images.
+proxy_distribution,cdr_proxy_q05,0.24035271067651465,5th percentile of cdr_proxy among strict-valid images.
+proxy_distribution,cdr_proxy_q95,0.636766311242757,95th percentile of cdr_proxy among strict-valid images.
+proxy_distribution,od_area_proxy_n,745,Number of strict-valid images with od_area_proxy.
+proxy_distribution,od_area_proxy_mean,4631.575838926175,Mean od_area_proxy among strict-valid images.
+proxy_distribution,od_area_proxy_std,1123.7669897558478,Standard deviation of od_area_proxy among strict-valid images.
+proxy_distribution,od_area_proxy_q05,2936.6,5th percentile of od_area_proxy among strict-valid images.
+proxy_distribution,od_area_proxy_q95,6547.6,95th percentile of od_area_proxy among strict-valid images.
+proxy_distribution,oc_area_proxy_n,745,Number of strict-valid images with oc_area_proxy.
+proxy_distribution,oc_area_proxy_mean,883.8536912751678,Mean oc_area_proxy among strict-valid images.
+proxy_distribution,oc_area_proxy_std,469.70442698177305,Standard deviation of oc_area_proxy among strict-valid images.
+proxy_distribution,oc_area_proxy_q05,254.60000000000002,5th percentile of oc_area_proxy among strict-valid images.
+proxy_distribution,oc_area_proxy_q95,1784.6,95th percentile of oc_area_proxy among strict-valid images.
+proxy_distribution,rim_area_proxy_n,745,Number of strict-valid images with rim_area_proxy.
+proxy_distribution,rim_area_proxy_mean,3747.7221476510067,Mean rim_area_proxy among strict-valid images.
+proxy_distribution,rim_area_proxy_std,1128.5859107349154,Standard deviation of rim_area_proxy among strict-valid images.
+proxy_distribution,rim_area_proxy_q05,2020.4,5th percentile of rim_area_proxy among strict-valid images.
+proxy_distribution,rim_area_proxy_q95,5707.6,95th percentile of rim_area_proxy among strict-valid images.
+proxy_distribution,od_confidence_n,745,Number of strict-valid images with od_confidence.
+proxy_distribution,od_confidence_mean,0.968220464015167,Mean od_confidence among strict-valid images.
+proxy_distribution,od_confidence_std,0.022145557609335183,Standard deviation of od_confidence among strict-valid images.
+proxy_distribution,od_confidence_q05,0.9138429641723632,5th percentile of od_confidence among strict-valid images.
+proxy_distribution,od_confidence_q95,0.9831076622009278,95th percentile of od_confidence among strict-valid images.
+proxy_distribution,oc_confidence_n,745,Number of strict-valid images with oc_confidence.
+proxy_distribution,oc_confidence_mean,0.9530583882927246,Mean oc_confidence among strict-valid images.
+proxy_distribution,oc_confidence_std,0.12182789555188309,Standard deviation of oc_confidence among strict-valid images.
+proxy_distribution,oc_confidence_q05,0.887850570678711,5th percentile of oc_confidence among strict-valid images.
+proxy_distribution,oc_confidence_q95,0.9857314109802247,95th percentile of oc_confidence among strict-valid images.
+disease_association_face_validity,patient_level_cdr_proxy_gon_positive_minus_gon_negative,0.08269130782411294,"GON+ patients showed higher patient-level area_cdr_proxy than GON- patients with bootstrap 95% CI [0.05808554865819066, 0.10746060699913317]."

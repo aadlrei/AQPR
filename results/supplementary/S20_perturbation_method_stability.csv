@@ -1,0 +1,73 @@
+model_name,perturbation_method,stratum_type,stratum_label,level,n_settings,n_supported_settings,n_directional_settings,n_not_supported_settings,supported_setting_fraction,directional_setting_fraction,gon_label,quality_group
+ConvNeXtTiny,blur,overall,overall,patient,9,9,9,0,1.0,1.0,,
+ConvNeXtTiny,gaussian_noise,overall,overall,patient,9,0,0,9,0.0,0.0,,
+ConvNeXtTiny,mean_fill,overall,overall,patient,9,3,3,6,0.3333333333333333,0.3333333333333333,,
+EfficientNetB0,blur,overall,overall,patient,9,0,3,6,0.0,0.3333333333333333,,
+EfficientNetB0,gaussian_noise,overall,overall,patient,9,0,0,9,0.0,0.0,,
+EfficientNetB0,mean_fill,overall,overall,patient,9,9,9,0,1.0,1.0,,
+ConvNeXtTiny,blur,label,gon_label=GON+,patient,9,9,9,0,1.0,1.0,GON+,
+ConvNeXtTiny,blur,label,gon_label=GON-,patient,9,9,9,0,1.0,1.0,GON-,
+ConvNeXtTiny,gaussian_noise,label,gon_label=GON+,patient,9,0,3,6,0.0,0.3333333333333333,GON+,
+ConvNeXtTiny,gaussian_noise,label,gon_label=GON-,patient,9,0,0,9,0.0,0.0,GON-,
+ConvNeXtTiny,mean_fill,label,gon_label=GON+,patient,9,3,3,6,0.3333333333333333,0.3333333333333333,GON+,
+ConvNeXtTiny,mean_fill,label,gon_label=GON-,patient,9,1,3,6,0.1111111111111111,0.3333333333333333,GON-,
+EfficientNetB0,blur,label,gon_label=GON+,patient,9,3,6,3,0.3333333333333333,0.6666666666666666,GON+,
+EfficientNetB0,blur,label,gon_label=GON-,patient,9,0,0,9,0.0,0.0,GON-,
+EfficientNetB0,gaussian_noise,label,gon_label=GON+,patient,9,0,0,9,0.0,0.0,GON+,
+EfficientNetB0,gaussian_noise,label,gon_label=GON-,patient,9,0,0,9,0.0,0.0,GON-,
+EfficientNetB0,mean_fill,label,gon_label=GON+,patient,9,9,9,0,1.0,1.0,GON+,
+EfficientNetB0,mean_fill,label,gon_label=GON-,patient,9,2,9,0,0.2222222222222222,1.0,GON-,
+ConvNeXtTiny,blur,quality,quality_group=high,patient,9,9,9,0,1.0,1.0,,high
+ConvNeXtTiny,blur,quality,quality_group=low,patient,9,9,9,0,1.0,1.0,,low
+ConvNeXtTiny,blur,quality,quality_group=medium,patient,9,9,9,0,1.0,1.0,,medium
+ConvNeXtTiny,gaussian_noise,quality,quality_group=high,patient,9,0,0,9,0.0,0.0,,high
+ConvNeXtTiny,gaussian_noise,quality,quality_group=low,patient,9,0,0,9,0.0,0.0,,low
+ConvNeXtTiny,gaussian_noise,quality,quality_group=medium,patient,9,0,0,9,0.0,0.0,,medium
+ConvNeXtTiny,mean_fill,quality,quality_group=high,patient,9,3,3,6,0.3333333333333333,0.3333333333333333,,high
+ConvNeXtTiny,mean_fill,quality,quality_group=low,patient,9,0,3,6,0.0,0.3333333333333333,,low
+ConvNeXtTiny,mean_fill,quality,quality_group=medium,patient,9,0,3,6,0.0,0.3333333333333333,,medium
+EfficientNetB0,blur,quality,quality_group=high,patient,9,1,4,5,0.1111111111111111,0.4444444444444444,,high
+EfficientNetB0,blur,quality,quality_group=low,patient,9,0,3,6,0.0,0.3333333333333333,,low
+EfficientNetB0,blur,quality,quality_group=medium,patient,9,0,1,8,0.0,0.1111111111111111,,medium
+EfficientNetB0,gaussian_noise,quality,quality_group=high,patient,9,0,0,9,0.0,0.0,,high
+EfficientNetB0,gaussian_noise,quality,quality_group=low,patient,9,0,0,9,0.0,0.0,,low
+EfficientNetB0,gaussian_noise,quality,quality_group=medium,patient,9,0,0,9,0.0,0.0,,medium
+EfficientNetB0,mean_fill,quality,quality_group=high,patient,9,9,9,0,1.0,1.0,,high
+EfficientNetB0,mean_fill,quality,quality_group=low,patient,9,9,9,0,1.0,1.0,,low
+EfficientNetB0,mean_fill,quality,quality_group=medium,patient,9,9,9,0,1.0,1.0,,medium
+ConvNeXtTiny,blur,label_quality,gon_label=GON+ | quality_group=high,patient,9,9,9,0,1.0,1.0,GON+,high
+ConvNeXtTiny,blur,label_quality,gon_label=GON+ | quality_group=low,patient,9,9,9,0,1.0,1.0,GON+,low
+ConvNeXtTiny,blur,label_quality,gon_label=GON+ | quality_group=medium,patient,9,9,9,0,1.0,1.0,GON+,medium
+ConvNeXtTiny,blur,label_quality,gon_label=GON- | quality_group=high,patient,9,9,9,0,1.0,1.0,GON-,high
+ConvNeXtTiny,blur,label_quality,gon_label=GON- | quality_group=low,patient,9,9,9,0,1.0,1.0,GON-,low
+ConvNeXtTiny,blur,label_quality,gon_label=GON- | quality_group=medium,patient,9,9,9,0,1.0,1.0,GON-,medium
+ConvNeXtTiny,gaussian_noise,label_quality,gon_label=GON+ | quality_group=high,patient,9,0,2,7,0.0,0.2222222222222222,GON+,high
+ConvNeXtTiny,gaussian_noise,label_quality,gon_label=GON+ | quality_group=low,patient,9,0,2,7,0.0,0.2222222222222222,GON+,low
+ConvNeXtTiny,gaussian_noise,label_quality,gon_label=GON+ | quality_group=medium,patient,9,0,3,6,0.0,0.3333333333333333,GON+,medium
+ConvNeXtTiny,gaussian_noise,label_quality,gon_label=GON- | quality_group=high,patient,9,0,0,9,0.0,0.0,GON-,high
+ConvNeXtTiny,gaussian_noise,label_quality,gon_label=GON- | quality_group=low,patient,9,0,0,9,0.0,0.0,GON-,low
+ConvNeXtTiny,gaussian_noise,label_quality,gon_label=GON- | quality_group=medium,patient,9,0,0,9,0.0,0.0,GON-,medium
+ConvNeXtTiny,mean_fill,label_quality,gon_label=GON+ | quality_group=high,patient,9,3,3,6,0.3333333333333333,0.3333333333333333,GON+,high
+ConvNeXtTiny,mean_fill,label_quality,gon_label=GON+ | quality_group=low,patient,9,1,3,6,0.1111111111111111,0.3333333333333333,GON+,low
+ConvNeXtTiny,mean_fill,label_quality,gon_label=GON+ | quality_group=medium,patient,9,0,3,6,0.0,0.3333333333333333,GON+,medium
+ConvNeXtTiny,mean_fill,label_quality,gon_label=GON- | quality_group=high,patient,9,1,3,6,0.1111111111111111,0.3333333333333333,GON-,high
+ConvNeXtTiny,mean_fill,label_quality,gon_label=GON- | quality_group=low,patient,9,0,1,8,0.0,0.1111111111111111,GON-,low
+ConvNeXtTiny,mean_fill,label_quality,gon_label=GON- | quality_group=medium,patient,9,0,2,7,0.0,0.2222222222222222,GON-,medium
+EfficientNetB0,blur,label_quality,gon_label=GON+ | quality_group=high,patient,9,2,6,3,0.2222222222222222,0.6666666666666666,GON+,high
+EfficientNetB0,blur,label_quality,gon_label=GON+ | quality_group=low,patient,9,2,8,1,0.2222222222222222,0.8888888888888888,GON+,low
+EfficientNetB0,blur,label_quality,gon_label=GON+ | quality_group=medium,patient,9,1,3,6,0.1111111111111111,0.3333333333333333,GON+,medium
+EfficientNetB0,blur,label_quality,gon_label=GON- | quality_group=high,patient,9,0,0,9,0.0,0.0,GON-,high
+EfficientNetB0,blur,label_quality,gon_label=GON- | quality_group=low,patient,9,0,0,9,0.0,0.0,GON-,low
+EfficientNetB0,blur,label_quality,gon_label=GON- | quality_group=medium,patient,9,0,0,9,0.0,0.0,GON-,medium
+EfficientNetB0,gaussian_noise,label_quality,gon_label=GON+ | quality_group=high,patient,9,0,3,6,0.0,0.3333333333333333,GON+,high
+EfficientNetB0,gaussian_noise,label_quality,gon_label=GON+ | quality_group=low,patient,9,0,6,3,0.0,0.6666666666666666,GON+,low
+EfficientNetB0,gaussian_noise,label_quality,gon_label=GON+ | quality_group=medium,patient,9,0,0,9,0.0,0.0,GON+,medium
+EfficientNetB0,gaussian_noise,label_quality,gon_label=GON- | quality_group=high,patient,9,0,0,9,0.0,0.0,GON-,high
+EfficientNetB0,gaussian_noise,label_quality,gon_label=GON- | quality_group=low,patient,9,0,0,9,0.0,0.0,GON-,low
+EfficientNetB0,gaussian_noise,label_quality,gon_label=GON- | quality_group=medium,patient,9,0,0,9,0.0,0.0,GON-,medium
+EfficientNetB0,mean_fill,label_quality,gon_label=GON+ | quality_group=high,patient,9,9,9,0,1.0,1.0,GON+,high
+EfficientNetB0,mean_fill,label_quality,gon_label=GON+ | quality_group=low,patient,9,9,9,0,1.0,1.0,GON+,low
+EfficientNetB0,mean_fill,label_quality,gon_label=GON+ | quality_group=medium,patient,9,9,9,0,1.0,1.0,GON+,medium
+EfficientNetB0,mean_fill,label_quality,gon_label=GON- | quality_group=high,patient,9,0,9,0,0.0,1.0,GON-,high
+EfficientNetB0,mean_fill,label_quality,gon_label=GON- | quality_group=low,patient,9,0,9,0,0.0,1.0,GON-,low
+EfficientNetB0,mean_fill,label_quality,gon_label=GON- | quality_group=medium,patient,9,0,5,4,0.0,0.5555555555555556,GON-,medium

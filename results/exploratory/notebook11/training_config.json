@@ -1,0 +1,36 @@
+{
+  "notebook": "11_hybrid_anatomy_aware_classifier_training",
+  "cell": "03_train_hybrid_anatomy_aware_classifier",
+  "status": "configured",
+  "device": "cuda",
+  "hybrid_experiment_id": "hybrid_full_image_plus_od_centered_2p5x_effb0",
+  "full_branch_backbone": "efficientnet_b0",
+  "anatomy_branch_backbone": "efficientnet_b0",
+  "fusion_strategy": "late_feature_concatenation",
+  "input_size": 384,
+  "pretrained": true,
+  "max_epochs": 80,
+  "early_stopping_patience": 15,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.0001,
+  "grad_clip_norm": 5.0,
+  "amp_enabled": true,
+  "train_batch_size": 8,
+  "eval_batch_size": 8,
+  "primary_selection_metric": "patient_val_auroc",
+  "secondary_selection_metric": "patient_val_brier_score",
+  "class_weight_info": {
+    "n_negative": 141,
+    "n_positive": 383,
+    "negative_weight": 1.8581560283687943,
+    "positive_weight": 0.6840731070496083
+  },
+  "train_class_counts": {
+    "0": 141,
+    "1": 383
+  },
+  "best_checkpoint_path": "${AQPR_PROJECT_ROOT}/models/hygd_hybrid_anatomy_aware_classifiers/training_runs/hybrid_full_image_plus_od_centered_2p5x_effb0/hybrid_full_image_plus_od_centered_2p5x_effb0_seed42/best_checkpoint.pt",
+  "last_checkpoint_path": "${AQPR_PROJECT_ROOT}/models/hygd_hybrid_anatomy_aware_classifiers/training_runs/hybrid_full_image_plus_od_centered_2p5x_effb0/hybrid_full_image_plus_od_centered_2p5x_effb0_seed42/last_checkpoint.pt",
+  "resumed_from_checkpoint": false,
+  "start_epoch": 1
+}

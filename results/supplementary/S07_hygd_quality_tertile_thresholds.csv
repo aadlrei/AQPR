@@ -1,0 +1,4 @@
+quality_tertile,n_images,n_patients,n_gon_positive_images,n_gon_negative_images,score_min,score_q25,score_median,score_q75,score_max,score_mean,score_std,strict_proxy_valid_images,strict_proxy_valid_fraction
+low,249,160,195,54,2.04,4.21,4.92,5.36,5.72,4.728313253012048,0.7832106470202679,247,0.9919678714859438
+medium,251,160,172,79,5.73,5.98,6.19,6.31,6.47,6.148446215139442,0.19926358446945971,251,1.0
+high,247,139,181,66,6.48,6.63,6.79,6.995,7.69,6.841740890688261,0.27298970629662744,247,1.0

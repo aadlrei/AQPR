@@ -1,0 +1,98 @@
+{
+  "notebook": "11_hybrid_anatomy_aware_classifier_training",
+  "status": "PASS",
+  "analysis_scope": "Hybrid full-image plus OD-centered classifier training, locked-test evaluation, internal baseline comparison, and branch contribution analysis.",
+  "hybrid_model_id": "hybrid__full_image_plus_od_centered_2p5x_effb0",
+  "hybrid_experiment_id": "hybrid_full_image_plus_od_centered_2p5x_effb0",
+  "full_branch_backbone": "efficientnet_b0",
+  "anatomy_branch_backbone": "efficientnet_b0",
+  "fusion_strategy": "late_feature_concatenation",
+  "best_checkpoint": "${AQPR_PROJECT_ROOT}/models/hygd_hybrid_anatomy_aware_classifiers/training_runs/hybrid_full_image_plus_od_centered_2p5x_effb0/hybrid_full_image_plus_od_centered_2p5x_effb0_seed42/best_checkpoint.pt",
+  "best_epoch_one_indexed": 20,
+  "locked_test_patient_auroc": 1.0,
+  "locked_test_patient_balanced_accuracy": 1.0,
+  "locked_test_patient_brier_score": 0.009427158582193,
+  "significant_brier_improvements": [
+    {
+      "reference_model_id": "full_image__EfficientNetB0",
+      "reference_label": "Full image\nEffNet-B0",
+      "reference_group": "Full-image",
+      "comparator_model_id": "hybrid__full_image_plus_od_centered_2p5x_effb0",
+      "metric": "brier_score",
+      "metric_label": "Patient Brier score",
+      "reference_observed": 0.0567982464358536,
+      "hybrid_observed": 0.009427158582193,
+      "delta_hybrid_minus_reference": -0.0473710878536606,
+      "delta_ci95_low": -0.0964529105184386,
+      "delta_ci95_high": -0.0121591478093163,
+      "paired_bootstrap_p_two_sided": 0.0004
+    },
+    {
+      "reference_model_id": "full_image__MobileNetV3Large",
+      "reference_label": "Full image\nMobileNetV3",
+      "reference_group": "Full-image",
+      "comparator_model_id": "hybrid__full_image_plus_od_centered_2p5x_effb0",
+      "metric": "brier_score",
+      "metric_label": "Patient Brier score",
+      "reference_observed": 0.0513557604670079,
+      "hybrid_observed": 0.009427158582193,
+      "delta_hybrid_minus_reference": -0.0419286018848149,
+      "delta_ci95_low": -0.0989781985824339,
+      "delta_ci95_high": -0.0018612993823737,
+      "paired_bootstrap_p_two_sided": 0.0312
+    },
+    {
+      "reference_model_id": "anatomy__outside_od_only_trained_control",
+      "reference_label": "Outside-OD\ncontrol",
+      "reference_group": "Shortcut-control",
+      "comparator_model_id": "hybrid__full_image_plus_od_centered_2p5x_effb0",
+      "metric": "brier_score",
+      "metric_label": "Patient Brier score",
+      "reference_observed": 0.0225388561144777,
+      "hybrid_observed": 0.009427158582193,
+      "delta_hybrid_minus_reference": -0.0131116975322847,
+      "delta_ci95_low": -0.029791177097353,
+      "delta_ci95_high": -0.0005215159541344,
+      "paired_bootstrap_p_two_sided": 0.0368
+    }
+  ],
+  "branch_contribution_summary": [
+    {
+      "branch_mode": "original_hybrid",
+      "patient_auroc": 1.0,
+      "patient_balanced_accuracy": 1.0,
+      "patient_brier_score": 0.009427158582193
+    },
+    {
+      "branch_mode": "full_image_branch_only",
+      "patient_auroc": 0.9955357142857144,
+      "patient_balanced_accuracy": 0.9375,
+      "patient_brier_score": 0.0359433875485452
+    },
+    {
+      "branch_mode": "od_centered_branch_only",
+      "patient_auroc": 0.9776785714285714,
+      "patient_balanced_accuracy": 0.78125,
+      "patient_brier_score": 0.1126802304496687
+    },
+    {
+      "branch_mode": "both_branches_neutralized",
+      "patient_auroc": 0.5,
+      "patient_balanced_accuracy": 0.5,
+      "patient_brier_score": 0.291183124889027
+    }
+  ],
+  "primary_interpretation": "The hybrid model is a strong internal candidate: it preserves ceiling-level patient discrimination and improves Brier score against selected baselines. Branch analysis indicates complementary contribution, but the model remains partly dependent on full-image signal and must undergo integrated XAI, calibration, shortcut and external validation before final selection.",
+  "recommended_next_notebook": "12_integrated_internal_model_audit_and_freezing.ipynb",
+  "recommended_next_step": "Integrate all internal evidence from Notebooks 07-11, audit XAI/anatomical plausibility for the hybrid and selected comparators, then freeze the model set for external validation.",
+  "outputs": {
+    "final_synthesis_csv": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/notebook11_final_synthesis.csv",
+    "final_interpretation_csv": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/notebook11_final_interpretation.csv",
+    "final_branch_summary_csv": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/notebook11_final_branch_contribution_summary.csv",
+    "final_checks_csv": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/notebook11_final_status_checks.csv",
+    "final_status_json": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/notebook11_final_status.json",
+    "final_status_txt": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/notebook11_FINAL_STATUS.txt",
+    "hybrid_comparison_figure_png": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/figures/notebook11_main_hybrid_vs_internal_baselines_comparison.png",
+    "branch_contribution_figure_png": "${AQPR_PROJECT_ROOT}/results/11_hybrid_anatomy_aware_classifier_training/figures/notebook11_hybrid_branch_contribution_figure.png"
+  }
+}

@@ -1,0 +1,17 @@
+external_source_dataset,n_images,n_positive,n_negative,prevalence,eligible_for_auroc_and_bootstrap_ci,has_source_bootstrap_ci,calibration_points_available,interpretation
+OIA-ODIR-TRAIN,3129,197,2932,0.06295941195270055,True,True,True,two-class source with bootstrap CI
+G1020,1020,296,724,0.2901960784313726,True,True,True,two-class source with bootstrap CI
+OIA-ODIR-TEST-ONLINE,860,58,802,0.06744186046511629,True,True,True,two-class source with bootstrap CI
+ORIGA,650,168,482,0.25846153846153846,True,True,True,two-class source with bootstrap CI
+BEH,634,171,463,0.2697160883280757,True,True,True,two-class source with bootstrap CI
+OIA-ODIR-TEST-OFFLINE,453,36,417,0.07947019867549669,True,True,True,two-class source with bootstrap CI
+sjchoi86-HRF,401,101,300,0.2518703241895262,True,True,True,two-class source with bootstrap CI
+FIVES,400,150,250,0.375,True,True,True,two-class source with bootstrap CI
+REFUGE1-train,400,40,360,0.1,True,True,True,two-class source with bootstrap CI
+REFUGE1-val,400,40,360,0.1,True,True,True,two-class source with bootstrap CI
+DRISHTI-GS1,101,70,31,0.693069306930693,True,True,True,two-class source with bootstrap CI
+CRFO-v4,79,48,31,0.6075949367088608,True,True,True,two-class source with bootstrap CI
+HRF,30,15,15,0.5,True,True,True,two-class source with bootstrap CI
+LES-AV,22,11,11,0.5,True,True,True,two-class source with bootstrap CI
+JSIEC-1000,38,0,38,0.0,False,False,True,descriptive calibration only; source metric CI limited by class count
+DR-HAGIS,10,10,0,1.0,False,False,True,descriptive calibration only; source metric CI limited by class count

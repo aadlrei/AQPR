@@ -1,0 +1,43 @@
+model_id,model_label,model_group,metric,metric_label,observed,ci95_low,ci95_high,n_valid_bootstrap
+full_image__EfficientNetB0,"Full image
+EffNet-B0",Full-image,auroc,Patient AUROC,0.984375,0.95,1.0,5000
+full_image__EfficientNetB0,"Full image
+EffNet-B0",Full-image,balanced_accuracy,Patient balanced accuracy,0.9464285714285714,0.8833333333333333,1.0,5000
+full_image__EfficientNetB0,"Full image
+EffNet-B0",Full-image,brier_score,Patient Brier score,0.0567982464358536,0.0208986543149694,0.1047317131621669,5000
+full_image__MobileNetV3Large,"Full image
+MobileNetV3",Full-image,auroc,Patient AUROC,1.0,1.0,1.0,5000
+full_image__MobileNetV3Large,"Full image
+MobileNetV3",Full-image,balanced_accuracy,Patient balanced accuracy,0.9821428571428572,0.94,1.0,5000
+full_image__MobileNetV3Large,"Full image
+MobileNetV3",Full-image,brier_score,Patient Brier score,0.0513557604670079,0.0104663598948521,0.109905647034998,5000
+full_image__DeiTSmall,"Full image
+DeiT-Small",Full-image,auroc,Patient AUROC,1.0,1.0,1.0,5000
+full_image__DeiTSmall,"Full image
+DeiT-Small",Full-image,balanced_accuracy,Patient balanced accuracy,1.0,1.0,1.0,5000
+full_image__DeiTSmall,"Full image
+DeiT-Small",Full-image,brier_score,Patient Brier score,0.0147720036293967,0.0078883430855854,0.0226491957960206,5000
+anatomy__od_centered_crop_2p5x,"OD-centered
+2.5x",Anatomy-constrained,auroc,Patient AUROC,1.0,1.0,1.0,5000
+anatomy__od_centered_crop_2p5x,"OD-centered
+2.5x",Anatomy-constrained,balanced_accuracy,Patient balanced accuracy,0.90625,0.8,1.0,5000
+anatomy__od_centered_crop_2p5x,"OD-centered
+2.5x",Anatomy-constrained,brier_score,Patient Brier score,0.0377303686484228,0.0004334022720064,0.0930951155679025,5000
+anatomy__od_centered_crop_4p0x,"OD-centered
+4.0x",Anatomy-constrained,auroc,Patient AUROC,0.9977678571428572,0.9869200805322128,1.0,5000
+anatomy__od_centered_crop_4p0x,"OD-centered
+4.0x",Anatomy-constrained,balanced_accuracy,Patient balanced accuracy,0.9375,0.84375,1.0,5000
+anatomy__od_centered_crop_4p0x,"OD-centered
+4.0x",Anatomy-constrained,brier_score,Patient Brier score,0.0217312373777532,0.0003989242447559,0.0600377546099115,5000
+anatomy__od_only_context_suppressed,"OD-only
+trained",Anatomy-constrained stress test,auroc,Patient AUROC,1.0,1.0,1.0,5000
+anatomy__od_only_context_suppressed,"OD-only
+trained",Anatomy-constrained stress test,balanced_accuracy,Patient balanced accuracy,1.0,1.0,1.0,5000
+anatomy__od_only_context_suppressed,"OD-only
+trained",Anatomy-constrained stress test,brier_score,Patient Brier score,0.0043218605107251,0.0003936147620497,0.0107567028586298,5000
+anatomy__outside_od_only_trained_control,"Outside-OD
+trained control",Shortcut-control,auroc,Patient AUROC,0.9955357142857144,0.9791666666666666,1.0,5000
+anatomy__outside_od_only_trained_control,"Outside-OD
+trained control",Shortcut-control,balanced_accuracy,Patient balanced accuracy,0.9821428571428572,0.9423076923076924,1.0,5000
+anatomy__outside_od_only_trained_control,"Outside-OD
+trained control",Shortcut-control,brier_score,Patient Brier score,0.0225388561144777,0.0043416826873758,0.0460897365805287,5000

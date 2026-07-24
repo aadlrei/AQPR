@@ -1,0 +1,2 @@
+proxy_metric,GON+ patients,GON− patients,GON+ mean CDR proxy,GON− mean CDR proxy,Mean difference,CI low,CI high,claim_boundary
+area_cdr_proxy,186,102,0.4438101064637815,0.3611187986396686,0.0826913078241129,0.0580855486581906,0.1074606069991331,face_validity_for_proxy_region_not_manual_hygd_segmentation_validation

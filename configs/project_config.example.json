@@ -1,0 +1,19 @@
+{
+  "project_name": "AQPR Glaucoma",
+  "article_title": "Anatomy-Quality-Patient Reliability Auditing for Fundus-Based Glaucoma Screening Under External Domain Shift",
+  "workflow": "Google Colab notebooks with external data stored outside GitHub",
+  "global_training_seed": 42,
+  "matched_random_seed": 411,
+  "bootstrap_replicates": 5000,
+  "matched_random_masks_primary": 128,
+  "insertion_deletion_fraction_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "notes": "Example public configuration. Dataset roots and restricted artifacts are not included."
+}

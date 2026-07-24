@@ -1,0 +1,13 @@
+# Unpinned compatibility list extracted from the public notebooks.
+# Exact versions will be frozen only after environment reconciliation.
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+opencv-python-headless
+Pillow
+torch
+torchvision
+timm
+tqdm

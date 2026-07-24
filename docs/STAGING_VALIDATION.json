@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "repository_files": 103,
+  "notebooks": 16,
+  "invalid_notebooks": 0,
+  "stored_outputs": 0,
+  "non_null_execution_counts": 0,
+  "forbidden_findings": [],
+  "github_actions_present": false,
+  "payload_present": false
+}

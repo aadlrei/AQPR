@@ -1,0 +1,24 @@
+{
+  "notebook": "10_anatomy_constrained_classifier_training",
+  "cell": "04_train_anatomy_constrained_classifiers",
+  "status": "configured",
+  "device": "cuda",
+  "experiments_to_train": [
+    "od_centered_crop_2p5x",
+    "od_centered_crop_4p0x",
+    "od_only_context_suppressed"
+  ],
+  "candidate_model": "efficientnet_b0",
+  "input_size": 384,
+  "use_imagenet_pretrained": true,
+  "max_epochs": 80,
+  "early_stopping_patience": 15,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "grad_clip_norm": 5.0,
+  "amp_enabled": true,
+  "primary_selection_metric": "patient_val_auroc",
+  "secondary_selection_metric": "patient_val_brier_score",
+  "training_root": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/anatomy_constrained_training_runs",
+  "checkpoint_root": "${AQPR_PROJECT_ROOT}/models/hygd_anatomy_constrained_classifiers/training_runs"
+}

@@ -1,0 +1,12 @@
+audit_component,parameter,value,rationale_or_guardrail
+Primary attribution,method,Integrated Gradients,Primary pixel-ranking method for expanded all-HYGD sanity and insertion/deletion analyses.
+Attribution localization checks,secondary methods,Grad-CAM/Grad-CAM++ where available; occlusion-based secondary check in v3.6,"Used only to assess method sensitivity, not to tune models."
+Integrated Gradients,steps,16,Fixed before external audit.
+Matched-random controls,primary K,128,Shape-preserving random-control ablation added for K=32/64/128.
+Matched-random controls,rejection sampling,"low target overlap, FOV containment, maximum attempts recorded",Avoids trivial overlap with OD/OC while preserving mask geometry.
+Insertion/deletion,fractions,"0.00, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50",Fixed curve grid; full curve points exported.
+Insertion/deletion,AUC integration,trapezoidal rule over sorted fractions,No interpolation beyond observed fraction grid.
+Perturbation sensitivity,methods,"blur, mean_fill, gaussian_noise","Blur, mean-fill, and Gaussian noise bound replacement dependence."
+Perturbation sensitivity,sigma/dilation grid,"sigma=4, dilation=0; sigma=4, dilation=7; sigma=4, dilation=14; sigma=8, dilation=0; sigma=8, dilation=7; sigma=8, dilation=14; sigma=12, dilation=0; sigma=12, dilation=7; sigma=12, dilation=14",Fixed before external audit.
+Bootstrap,replicates,5000,Patient-level bootstrap CIs; no model selection on HYGD.
+Random seed,seed,411,Used for reproducible control generation and subset-stability assignments.

@@ -1,0 +1,13 @@
+feature,level,n_units,n_positive,n_negative,auroc,informative_auc,higher_feature_associated_with,interpretation
+corner_edge_fraction,patient_mean,288,186,102,0.1611058401855366,0.8388941598144635,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+vignetting_center_minus_border,patient_mean,288,186,102,0.7912186379928315,0.7912186379928315,GON+,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+fov_area_fraction,patient_mean,288,186,102,0.7864484503478811,0.7864484503478811,GON+,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+corner_high_saturation_fraction,patient_mean,288,186,102,0.2336864853468269,0.7663135146531731,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+periphery_minus_center_gray,patient_mean,288,186,102,0.2423571579169302,0.7576428420830698,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+border_edge_fraction,patient_mean,288,186,102,0.2532152646004638,0.7467847353995362,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+corner_gray_std,patient_mean,288,186,102,0.3186801602361374,0.6813198397638626,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+border_gray_std,patient_mean,288,186,102,0.4186696183849883,0.5813303816150117,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+border_black_fraction,patient_mean,288,186,102,0.5805660974067046,0.5805660974067046,GON+,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+top_bottom_border_gray_asymmetry,patient_mean,288,186,102,0.4249947290744255,0.5750052709255745,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+border_gray_mean,patient_mean,288,186,102,0.4422833649588868,0.5577166350411131,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.
+periphery_gray_mean,patient_mean,288,186,102,0.4449715370018975,0.5550284629981025,GON-,Univariate artifact/acquisition cue association; not a causal explanation of outside-OD classifier behavior.

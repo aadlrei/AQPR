@@ -1,0 +1,22 @@
+# Data and generated heavy artifacts
+data/raw/
+data/processed/
+project_data/
+models/**/*.pt
+models/**/*.pth
+models/**/*.ckpt
+results/pending_license_and_sanitization/
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local configuration
+.env
+configs/paths.env
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

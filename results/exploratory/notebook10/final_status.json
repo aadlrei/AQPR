@@ -1,0 +1,127 @@
+{
+  "notebook": "10_anatomy_constrained_classifier_training",
+  "status": "PASS",
+  "analysis_scope": "Anatomy-constrained and shortcut-control classifier training and comparison against full-image glaucoma classifiers.",
+  "training_ready_strict_images": 745,
+  "outside_od_control_images": 745,
+  "models_included": [
+    "full_image__EfficientNetB0",
+    "full_image__MobileNetV3Large",
+    "full_image__DeiTSmall",
+    "anatomy__od_centered_crop_2p5x",
+    "anatomy__od_centered_crop_4p0x",
+    "anatomy__od_only_context_suppressed",
+    "anatomy__outside_od_only_trained_control"
+  ],
+  "anatomy_experiments": [
+    "od_centered_crop_2p5x",
+    "od_centered_crop_4p0x",
+    "od_only_context_suppressed",
+    "outside_od_only_trained_control"
+  ],
+  "validation_selected_experiment": "od_centered_crop_4p0x",
+  "primary_anatomically_parsimonious_model": "od_centered_crop_2p5x",
+  "outside_od_control_model": "outside_od_only_trained_control",
+  "primary_full_image_reference": "full_image__EfficientNetB0",
+  "primary_patient_level_results": [
+    {
+      "model_id": "full_image__EfficientNetB0",
+      "model_group": "full_image",
+      "model_role": "architecture_matched_full_image_reference",
+      "patient_auroc": 0.984375,
+      "patient_auroc_ci95": "[0.950000, 1.000000]",
+      "patient_balanced_accuracy": 0.9464285714285714,
+      "patient_balanced_accuracy_ci95": "[0.883333, 1.000000]",
+      "patient_brier_score": 0.0567982464358536,
+      "patient_brier_score_ci95": "[0.020899, 0.104732]",
+      "clinical_interpretation": "Reference full-image EfficientNet-B0 model used to isolate the effect of anatomical input restriction."
+    },
+    {
+      "model_id": "full_image__MobileNetV3Large",
+      "model_group": "full_image",
+      "model_role": "full_image_finalist",
+      "patient_auroc": 1.0,
+      "patient_auroc_ci95": "[1.000000, 1.000000]",
+      "patient_balanced_accuracy": 0.9821428571428572,
+      "patient_balanced_accuracy_ci95": "[0.940000, 1.000000]",
+      "patient_brier_score": 0.0513557604670079,
+      "patient_brier_score_ci95": "[0.010466, 0.109906]",
+      "clinical_interpretation": "Lightweight full-image finalist from the classifier benchmark."
+    },
+    {
+      "model_id": "full_image__DeiTSmall",
+      "model_group": "full_image",
+      "model_role": "full_image_finalist",
+      "patient_auroc": 1.0,
+      "patient_auroc_ci95": "[1.000000, 1.000000]",
+      "patient_balanced_accuracy": 1.0,
+      "patient_balanced_accuracy_ci95": "[1.000000, 1.000000]",
+      "patient_brier_score": 0.0147720036293967,
+      "patient_brier_score_ci95": "[0.007888, 0.022649]",
+      "clinical_interpretation": "Transformer-based full-image finalist from the classifier benchmark."
+    },
+    {
+      "model_id": "anatomy__od_centered_crop_2p5x",
+      "model_group": "anatomy_constrained",
+      "model_role": "primary_anatomically_parsimonious_model",
+      "patient_auroc": 1.0,
+      "patient_auroc_ci95": "[1.000000, 1.000000]",
+      "patient_balanced_accuracy": 0.90625,
+      "patient_balanced_accuracy_ci95": "[0.800000, 1.000000]",
+      "patient_brier_score": 0.0377303686484228,
+      "patient_brier_score_ci95": "[0.000433, 0.093095]",
+      "clinical_interpretation": "Primary OD-centered classifier; preserves local optic-disc/peripapillary context while restricting non-anatomical field information."
+    },
+    {
+      "model_id": "anatomy__od_centered_crop_4p0x",
+      "model_group": "anatomy_constrained",
+      "model_role": "wider_peripapillary_context_sensitivity_model",
+      "patient_auroc": 0.9977678571428572,
+      "patient_auroc_ci95": "[0.986920, 1.000000]",
+      "patient_balanced_accuracy": 0.9375,
+      "patient_balanced_accuracy_ci95": "[0.843750, 1.000000]",
+      "patient_brier_score": 0.0217312373777532,
+      "patient_brier_score_ci95": "[0.000399, 0.060038]",
+      "clinical_interpretation": "Sensitivity model with wider OD-centered context; validation-selected by Brier tie-break but less parsimonious than 2.5x."
+    },
+    {
+      "model_id": "anatomy__od_only_context_suppressed",
+      "model_group": "anatomy_constrained_stress_test",
+      "model_role": "trained_od_only_context_suppressed_stress_test",
+      "patient_auroc": 1.0,
+      "patient_auroc_ci95": "[1.000000, 1.000000]",
+      "patient_balanced_accuracy": 1.0,
+      "patient_balanced_accuracy_ci95": "[1.000000, 1.000000]",
+      "patient_brier_score": 0.0043218605107251,
+      "patient_brier_score_ci95": "[0.000394, 0.010757]",
+      "clinical_interpretation": "Stress-test classifier trained and evaluated with outside-OD context neutralized."
+    },
+    {
+      "model_id": "anatomy__outside_od_only_trained_control",
+      "model_group": "shortcut_control",
+      "model_role": "trained_outside_od_shortcut_control",
+      "patient_auroc": 0.9955357142857144,
+      "patient_auroc_ci95": "[0.979167, 1.000000]",
+      "patient_balanced_accuracy": 0.9821428571428572,
+      "patient_balanced_accuracy_ci95": "[0.942308, 1.000000]",
+      "patient_brier_score": 0.0225388561144777,
+      "patient_brier_score_ci95": "[0.004342, 0.046090]",
+      "clinical_interpretation": "Shortcut-control classifier; strong performance indicates predictive signal outside the optic disc and should not be treated as a clinically preferred model."
+    }
+  ],
+  "primary_interpretation": "Notebook 10 shows that OD-centered anatomy-constrained classifiers preserve high patient-level discrimination, while the trained outside-OD shortcut-control also performs strongly. This supports the claim that high performance must be interpreted together with anatomical plausibility and shortcut-control analyses.",
+  "recommended_next_notebook": "11_hybrid_anatomy_aware_classifier_training.ipynb",
+  "recommended_next_step": "Train a hybrid anatomy-aware classifier combining a full-image branch with an OD-centered branch, then compare performance, calibration, XAI/anatomical plausibility, and shortcut robustness against the full-image and anatomy-constrained baselines.",
+  "outputs": {
+    "final_synthesis_csv": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_final_synthesis.csv",
+    "final_model_roles_csv": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_final_model_roles.csv",
+    "final_primary_deltas_csv": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_final_primary_deltas_vs_full_image_efficientnetb0.csv",
+    "final_interpretation_csv": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_final_interpretation.csv",
+    "final_checks_csv": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_final_status_checks.csv",
+    "final_status_json": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_final_status.json",
+    "final_status_txt": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/notebook10_FINAL_STATUS.txt",
+    "main_comparison_figure_png": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/figures/notebook10_main_full_image_vs_anatomy_constrained_comparison.png",
+    "main_comparison_figure_pdf": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/figures/notebook10_main_full_image_vs_anatomy_constrained_comparison.pdf",
+    "main_comparison_figure_svg": "${AQPR_PROJECT_ROOT}/results/10_anatomy_constrained_classifier_training/figures/notebook10_main_full_image_vs_anatomy_constrained_comparison.svg"
+  }
+}

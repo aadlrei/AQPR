@@ -1,0 +1,7 @@
+model_name,xai_method,summary_name,curve_type,mean,ci95_low,ci95_high,n_units
+ConvNeXtTiny,PatchOcclusion,patient_level_occlusion_odoc_enrichment,,0.3314139858871467,0.2825952351928285,0.381012418539576,159
+EfficientNetB0,PatchOcclusion,patient_level_occlusion_odoc_enrichment,,0.031976554261461,0.0158084343997928,0.050764373807692,159
+ConvNeXtTiny,PatchOcclusion,patient_level_occlusion_auc_delta,deletion,0.0126194068158584,0.0046216271818295,0.0199817125509917,159
+ConvNeXtTiny,PatchOcclusion,patient_level_occlusion_auc_delta,insertion,0.2379080629572602,0.2073825400482325,0.267816461776927,159
+EfficientNetB0,PatchOcclusion,patient_level_occlusion_auc_delta,deletion,0.1400576290991122,0.1246557681352075,0.155595124970962,159
+EfficientNetB0,PatchOcclusion,patient_level_occlusion_auc_delta,insertion,0.1268909050516808,0.1061246240417407,0.1476440088555725,159

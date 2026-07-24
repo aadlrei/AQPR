@@ -1,0 +1,13 @@
+item,value,interpretation
+quality_score_source_file,${AQPR_PROJECT_ROOT}/project_data/preprocessed/preprocessing_quality_manifest.csv,Source selected by Notebook 14 reviewer source map.
+quality_score_source_kind,pipeline_detected_quality_artifact,"The manuscript should describe the score as coming from the selected HYGD quality artifact. If this artifact was produced upstream by the local pipeline rather than released directly with HYGD, state that it is a precomputed quality score used only for stratification."
+quality_manifest_has_score_column,True,Whether the selected upstream quality artifact contains a score-like column.
+quality_manifest_has_tertile_column,True,Whether the selected upstream quality artifact already contained a quality stratum.
+quality_tertile_origin,upstream_quality_manifest,"Tertiles are used only for reliability stratification, not for model training or threshold tuning."
+n_images_total,747,HYGD image count in the unified AQPR manifest.
+n_patients_total,288,HYGD patient count in the unified AQPR manifest.
+quality_score_missing_images,0,Images without usable quality score.
+quality_score_min,2.040000,Minimum available quality score.
+quality_score_max,7.690000,Maximum available quality score.
+quality_score_mean,5.904311,Mean available quality score.
+quality_score_std,1.007189,Standard deviation of available quality score.
